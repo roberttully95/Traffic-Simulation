@@ -1,0 +1,30 @@
+Assumptions:
+- Cars enter highway at an even time interval, lets say every 4 seconds to start.
+- Cars enter highway travelling at the highway speed limit.
+
+Vehicle Class:
+
+	Constants:
+	- length (4.5m)
+	- acceleration (3.5 m/s^2)
+	- deceleration (5.0 m/s^2)
+	
+	Variables:
+	- Max Speed
+	- Creation Time
+	
+Highway Class:
+	
+	Constants:
+	- Speed Limit (75 mph, 33.528 m/s)
+	
+	Variables:
+	- Length
+	- Number of Lanes
+	
+Construction Zone Class:
+	
+	Variables:
+	- Length
+	- Number of Lanes
+	- Speed Limit
