@@ -33,4 +33,18 @@ public class ConstructionZone {
 		return speedLimit;
 	}
 
+	// NOT 100% CERTAIN IF THE FOLLOWING METHOD SHOULD BE IN THS CLASS SINCE IT HAS
+	// PARAMETERS FROM OTHER CLASSES.
+
+	// METHODS
+	public double startOfZone(double roadLength, double constructionLength) {
+
+		// CALCULATES THE AMOUNT OF CLEAR ROAD ON THE HIGHWAY
+		double clearRoad = roadLength - constructionLength;
+
+		// ASSUMING THAT CONSTRUCTION IS AT THE END OF THE HIGHWAY, THE END OF THE CLEAR
+		// ROAD IS THE BEGINNING OF THE CONSTRUCTION ZONE.
+		return clearRoad;
+
+	}
 }

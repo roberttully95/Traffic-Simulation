@@ -3,7 +3,6 @@ Assumptions:
 - Cars enter highway travelling at the highway speed limit.
 
 Vehicle Class:
-
 	Constants:
 	- length (4.5m)
 	- acceleration (3.5 m/s^2)
@@ -13,8 +12,8 @@ Vehicle Class:
 	- Max Speed
 	- Creation Time
 	
-Highway Class:
 	
+Highway Class:
 	Constants:
 	- Speed Limit (75 mph, 33.528 m/s)
 	
@@ -22,9 +21,19 @@ Highway Class:
 	- Length
 	- Number of Lanes
 	
-Construction Zone Class:
 	
+Construction Zone Class:
 	Variables:
 	- Length
 	- Number of Lanes
 	- Speed Limit
+	
+
+Ideas:
+	- Create a vehicle, wait the specified amount of time before the next vehicle enters.
+		Each unit in the linked list will correspond to the length of one car.
+		Each car will have a current distance travelled that will depend on the following:
+		- Speed
+		- Acceleration
+		- Deceleration
+		- If there is a car immediately in front of it. 

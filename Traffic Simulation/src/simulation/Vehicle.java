@@ -41,4 +41,68 @@ public class Vehicle {
 	public double getMaxSpeed() {
 		return maxSpeed;
 	}
+
+	// METHODS
+	/**
+	 * Determines how far a car will travel while it accelerates/decelerates from
+	 * one speed to another.
+	 * 
+	 * @param u
+	 *            initial velocity
+	 * @param v
+	 *            final velocity
+	 * @return distance travelled.
+	 */
+	public double accelDecelDistance(double u, double v) {
+
+		// CASE 1: CAR IS DECELERATING.
+		if (v - u < 0) {
+			double dist = (v * v - u * u) / 2 * deceleration;
+
+			return dist;
+		}
+		// CASE 2: CAR IS ACCELERATING.
+		else if (v - u > 0) {
+			double dist = (v * v - u * u) / 2 * acceleration;
+
+			return dist;
+		}
+
+		// CASE 3: CAR IS NEITHER ACCELERATING OR DECELERATING.
+		else {
+			return 0;
+		}
+
+	}
+
+	/**
+	 * Determines how long it takes a car to accelerate/decelerate from one speed to
+	 * another.
+	 * 
+	 * @param u
+	 * @param v
+	 * @return
+	 */
+	public double accelDecelTime(double u, double v) {
+
+		// CASE 1: CAR IS DECELERATING.
+		if (v - u > 0) {
+			double time = accelDecelDistance(u, v) / (v - u);
+
+			return time;
+		}
+
+		// CASE 2: CAR IS ACCELERATING
+		else if (v - u < 0) {
+			double time = accelDecelDistance(u, v) / (u - v);
+
+			return time;
+		}
+
+		// CASE 3: CAR IS NEITHER ACCELERATING OR DECELERATING
+		else {
+			return 0;
+		}
+
+	}
 }
